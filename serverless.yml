@@ -72,6 +72,30 @@ custom:
 #    - exclude-me-dir/**
 
 functions:
+  GetNumberFromWebsite:
+    # this is the function name of handler.js
+    handler: handler.GetNumberFromWebsite
+    snowflake:
+      argument_signature: (website varchar)
+      data_type: variant
+    events:
+      - http:
+          path: GetNumberFromWebsite
+          method: post 
+          authorizer: aws_iam
+
+  GetJSONFromWebsite:
+    # this is the function name of handler.js
+    handler: handler.GetJSONFromWebsite
+    snowflake:
+      argument_signature: (website varchar)
+      data_type: variant
+    events:
+      - http:
+          path: GetJSONFromWebsite
+          method: post 
+          authorizer: aws_iam
+
   # this is the snowflake function name
   ant_serverless_ingest:
     # this is the function name of handler.js
