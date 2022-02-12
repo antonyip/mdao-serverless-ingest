@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "serverless-snowflake-external-function-plugin": "^0.1.5"
+  }
+}
